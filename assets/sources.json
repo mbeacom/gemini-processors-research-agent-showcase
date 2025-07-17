@@ -1,0 +1,21 @@
+[
+  {
+    "topic": "Google Releases Gemini Processors",
+    "source_url": "https://developers.googleblog.com/en/genai-processors/"
+  },
+  {
+    "topic": "Agentic calling",
+    "source_url": "https://techcrunch.com/2025/07/16/google-rolls-out-ai-powered-business-calling-feature-brings-gemini-2-5-pro-to-ai-mode/"
+  },
+  {
+    "topic": "This entry is invalid because it is missing a URL"
+  },
+  {
+    "topic": "A request with a malformed URL",
+    "source_url": "not-a-real-url"
+  },
+  {
+    "topic": "A draft blog post on a local server",
+    "source_url": "http://localhost:8000/my-draft"
+  }
+]
