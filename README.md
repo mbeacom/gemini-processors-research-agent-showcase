@@ -139,18 +139,21 @@ async for result in research_pipeline(input_stream):
 
 ```bash
 gemini-processors-research-agent-showcase/
-├── README.md                   # This file
-├── SHOWCASE.md                 # Detailed comparison analysis
-├── DESIGN_DOCUMENT.md         # Technical design decisions
-├── sources.json               # Test data (valid & invalid entries)
-├── traditional/               # Manual Python implementation
-│   ├── agent.py              # Traditional research agent
-│   ├── pyproject.toml        # Dependencies & tooling
-│   └── README.md             # Traditional approach docs
-└── processors/               # Gemini Processors implementation
-    ├── correct_agent.py      # Processors-based agent
-    ├── pyproject.toml        # Dependencies & tooling
-    └── README.md             # Processors approach docs
+├── assets               # Project assets (input data)
+│   └── sources.json     # Test data (valid & invalid entries)
+├── LICENSE              # The project license file
+├── processors           # Gemini Processors implementation
+│   ├── agent.py         # Processors-based agent
+│   ├── pyproject.toml   # Dependencies & tooling
+│   ├── README.md        # Processors approach docs
+│   └── uv.lock          # Dependencies & tooling
+├── README.md            # This file
+├── SHOWCASE.md          # Detailed comparison analysis
+└── traditional          # Manual Python implementation
+    ├── agent.py         # Traditional research agent
+    ├── pyproject.toml   # Dependencies & tooling
+    ├── README.md        # Traditional approach docs
+    └── uv.lock          # Dependencies & tooling
 ```
 
 ## 🎓 Learning Outcomes
@@ -165,6 +168,7 @@ After exploring this showcase, you'll understand:
 
 ## 🔗 Learn More
 
+- **[Blog Post: Gemini Processors Announcement](https://www.markbeacom.com/blog/architecture/genai/processors-announcement)** - Comprehensive overview and announcement
 - **[Detailed Comparison](SHOWCASE.md)** - In-depth analysis of both approaches
 - **[Gemini Processors Documentation](https://github.com/google-gemini/genai-processors)** - Official framework docs
 - **[Design Document](DESIGN_DOCUMENT.md)** - Technical architecture decisions

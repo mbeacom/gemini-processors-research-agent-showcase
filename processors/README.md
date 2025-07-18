@@ -20,8 +20,9 @@ uv run python agent.py
 
 - **`agent.py`** - The main Gemini Processors implementation (~400 lines)
 - **`pyproject.toml`** - Dependencies and project configuration
-- **`sources.json`** - Test data (shared with traditional implementation)
 - **`newsletter.md`** - Generated output report
+
+*Note: Input data is located in `../assets/sources.json` (shared with traditional implementation)*
 
 ## 🔧 Key Features Demonstrated
 
@@ -77,7 +78,7 @@ yield content_api.ProcessorPart(
 
 ## 📊 Expected Output
 
-The agent processes `sources.json` and generates `newsletter.md` with:
+The agent processes `../assets/sources.json` and generates `newsletter.md` with:
 
 - ✅ 2 successful summaries (from valid URLs)
 - ❌ 3 failed tasks (missing URL, invalid URL, localhost URL)

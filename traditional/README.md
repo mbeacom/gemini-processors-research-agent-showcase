@@ -2,11 +2,33 @@
 
 This directory contains the traditional implementation of the AI research agent, built using manual control flow, explicit error handling, and the Google Gemini Python SDK (`google-genai`).
 
-## Purpose
+## 🎯 Purpose
 
 This implementation serves as the "before" picture to demonstrate the complexity and boilerplate code required when building AI workflows without a proper framework like Gemini Processors.
 
-## Key Characteristics
+## 🚀 Quick Start
+
+```bash
+# Ensure you're in the traditional directory
+cd traditional
+
+# Set your API key
+export GEMINI_API_KEY="your-gemini-api-key"
+
+# Install dependencies and run
+uv sync --all-groups
+uv run python agent.py
+```
+
+## 📁 Files
+
+- **`agent.py`** - The traditional implementation (~800+ lines)
+- **`pyproject.toml`** - Dependencies and project configuration
+- **`newsletter.md`** - Generated output report
+
+*Note: Input data is located in `../assets/sources.json` (shared with processors implementation)*
+
+## ⚙️ Key Characteristics
 
 - **Manual Control Flow**: Uses explicit for loops, if/else statements, and try/catch blocks
 - **Explicit Error Handling**: Every step requires manual error checking and state management
@@ -14,17 +36,17 @@ This implementation serves as the "before" picture to demonstrate the complexity
 - **Complex State Management**: Manual tracking of success/failure states throughout the pipeline
 - **Direct API Usage**: Uses the `google-genai` SDK directly with manual client management
 
-## Installation
+## 🔧 Installation
 
 1. Make sure you have Python 3.13+ installed
-2. Install dependencies:
+2. Install dependencies using uv:
 
    ```bash
    cd traditional
-   pip install -e .
+   uv sync --all-groups
    ```
 
-## Configuration
+## ⚙️ Configuration
 
 Set your Gemini API key:
 
@@ -32,45 +54,37 @@ Set your Gemini API key:
 export GEMINI_API_KEY="your-api-key-here"
 ```
 
-## Usage
+## 🏃‍♂️ Usage
 
 Run the traditional agent:
 
 ```bash
-python agent.py
-```
-
-Or use the setup script:
-
-```bash
-./setup_and_run.sh
-```
-
-Or use the runner:
-
-```bash
-python run_agent.py
+uv run python agent.py
 ```
 
 This will:
 
-1. Read tasks from `sources.json`
+1. Read tasks from `../assets/sources.json`
 2. Validate each task manually
 3. Fetch content from valid URLs
 4. Generate summaries using Gemini AI
 5. Create a `newsletter.md` report
 
-## Testing
+## 🧪 Testing
 
 Test that imports work correctly:
 
 ```bash
-python test_imports.py
+uv run python -c "import agent; print('✅ Imports working')"
 ```
 
-## Input Format
+## 📊 Expected Output
 
-The agent expects a `sources.json` file with the following format:
+The agent processes `../assets/sources.json` and generates `newsletter.md` with the same output as the processors implementation, but using traditional manual control flow.
+
+## 📂 Input Format
+
+The agent expects a `../assets/sources.json` file with the following format:
 
 ```json
 [
@@ -81,11 +95,21 @@ The agent expects a `sources.json` file with the following format:
 ]
 ```
 
-## Output
+## 📄 Output
 
 The agent generates a `newsletter.md` file containing summaries of all successfully processed articles.
 
-## Implementation Highlights
+## 🔍 Compare with Processors
+
+See the [Gemini Processors implementation](../processors/) to understand the dramatic difference in complexity and development experience.
+
+## 🛠️ Dependencies
+
+- **google-genai** - Google Gemini API client
+- **pydantic** - Data validation
+- **httpx** - HTTP client for URL fetching
+
+## 🏗️ Implementation Highlights
 
 This traditional implementation showcases:
 
@@ -97,7 +121,7 @@ This traditional implementation showcases:
 - **Manual Template Generation**: String manipulation for report formatting
 - **Direct Gemini API Usage**: Using `client.models.generate_content()` with manual error handling
 
-## API Usage Examples
+## 💡 API Usage Examples
 
 The implementation demonstrates traditional patterns like:
 
