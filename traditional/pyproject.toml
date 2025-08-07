@@ -1,6 +1,6 @@
 [project]
 name = "gemini-processors-research-agent-showcase-traditional"
-version = "0.1.0"
+version = "0.1.1"
 description = "A showcase of Gemini processors for building agents versus without them"
 readme = "../README.md"
 requires-python = ">=3.13"
